@@ -11,7 +11,7 @@ const options = {
 };
 
 
-async function fetchData(urlApi){
+async function fetchData_os(urlApi){
     const response = await fetch (urlApi, options);
     const data = await response.json();
     return data;
@@ -19,7 +19,7 @@ async function fetchData(urlApi){
 
 (async ()=>{
     try {
-        const videos = await fetchData(API);
+        const videos = await fetchData_os(API);
         let view = `
             ${videos.items.map(video =>`
                 <div class="group relative">
@@ -42,3 +42,9 @@ async function fetchData(urlApi){
         console.log(error);
     }
 }) ();
+
+//******************************************** */
+//podria consumir otra api
+
+
+
